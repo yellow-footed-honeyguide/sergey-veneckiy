@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergey Veneckiy - Software Engineer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #0a192f;
+            --text-color: #8892b0;
+            --highlight-color: #64ffda;
+            --secondary-color: #ffd700;
+            --tertiary-color: #3a86ff;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: var(--highlight-color);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .experience-highlight {
+            background-color: rgba(100, 255, 218, 0.1);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--highlight-color);
+        }
+
+        .code-block {
+            background-color: #112240;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .code-label {
+            background-color: var(--tertiary-color);
+            color: #ffffff;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        pre {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'IBM Plex Mono', monospace;
+            display: inline-block;
+            white-space: pre;
+        }
+
+        .comment { color: #637777; }
+        .keyword { color: var(--tertiary-color); }
+        .string { color: var(--secondary-color); }
+        .function { color: var(--highlight-color); }
+
+        #output {
+            background-color: #112240;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .note {
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--text-color);
+            text-align: center;
+            padding: 15px;
+            border: 1px solid var(--highlight-color);
+            border-radius: 4px;
+        }
+
+        .typing-effect {
+            overflow: hidden;
+            border-right: 2px solid var(--highlight-color);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--highlight-color); }
+        }
+
+        .console-line {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .console-line.success {
+            color: var(--highlight-color);
+        }
+
+        .console-line.info {
+            color: var(--tertiary-color);
+        }
+
+        .console-line.result {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sergey Veneckiy</h1>
+        <div class="subtitle typing-effect">Software Engineer</div>
+        
+        <div class="experience-highlight">
+            <p>Sergey Veneckiy brings a unique fusion of startup agility and corporate scalability, crafting innovative solutions that stand the test of enterprise-grade demands.</p>
+        </div>
+
+        <div class="code-block">
+            <div class="code-label">sergey_veneckiy.hpp</div>
+            <pre><code id="library-code"></code></pre>
+        </div>
+
+        <div class="code-block">
+            <div class="code-label">main.cpp</div>
+            <pre><code id="main-code"></code></pre>
+        </div>
+
+        <div id="output">
+            <div class="code-label">Console Output</div>
+            <pre><code id="console-output"></code></pre>
+        </div>
+
+        <p class="note">For a comprehensive resume and project history, please contact: s.venetsky@gmail.com</p>
+    </div>
+
+    <script>
+        const libraryCode = `// sergey_veneckiy.hpp - High-performance software engineering toolkit
+
+#pragma once
+#include <vector>
+#include <string>
+
+namespace SergeyVeneckiy {
+
+class SoftwareEngineer {
+public:
+    void optimizePerformance(Project& project);
+    void implementRobustSolutions(Project& project);
+    void solveComplexChallenge(Problem& problem);
+    void bridgeStartupAndCorporate(Project& project);
+    void deliverTechTalk(const std::string& topic);
+
+private:
+    int experience_years = 8;
+    std::vector<std::string> skills = {"C++", "Python", "Linux", "Embedded"};
+};
+
+} // namespace SergeyVeneckiy`;
+
+        const mainCode = `#include "sergey_veneckiy.hpp"
+#include <iostream>
+
+int main() {
+    SergeyVeneckiy::SoftwareEngineer sergey;
+    Project enterprise_project;
+    
+    sergey.optimizePerformance(enterprise_project);
+    sergey.implementRobustSolutions(enterprise_project);
+    
+    Problem challenge("System scalability");
+    sergey.solveComplexChallenge(challenge);
+    
+    sergey.bridgeStartupAndCorporate(enterprise_project);
+    sergey.deliverTechTalk("Advanced Software Architecture");
+    
+    std::cout << "Project success achieved!" << std::endl;
+    return 0;
+}`;
+
+        function typeCode(codeElement, codeContent) {
+            let i = 0;
+            function type() {
+                if (i < codeContent.length) {
+                    codeElement.innerHTML += highlightSyntax(codeContent.charAt(i));
+                    i++;
+                    setTimeout(type, 10);
+                }
+            }
+            type();
+        }
+
+        function highlightSyntax(char) {
+            if (char === '/') return '<span class="comment">/';
+            if ('#{}<>'.includes(char)) return '<span class="keyword">' + char + '</span>';
+            if ('"\''.includes(char)) return '<span class="string">' + char + '</span>';
+            if ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_'.includes(char)) return '<span class="function">' + char + '</span>';
+            return char;
+        }
+
+        function simulateCompilation() {
+            const consoleOutput = document.getElementById('console-output');
+            consoleOutput.innerHTML = '';
+            
+            function addConsoleLine(text, className) {
+                const line = document.createElement('div');
+                line.textContent = text;
+                line.className = 'console-line ' + className;
+                consoleOutput.appendChild(line);
+            }
+
+            setTimeout(() => addConsoleLine('Compiling sergey_veneckiy.hpp...', 'info'), 500);
+            setTimeout(() => addConsoleLine('Compilation successful.', 'success'), 1500);
+            setTimeout(() => addConsoleLine('Compiling main.cpp...', 'info'), 2000);
+            setTimeout(() => addConsoleLine('Linking...', 'info'), 2500);
+            setTimeout(() => addConsoleLine('Build successful.', 'success'), 3000);
+            setTimeout(() => addConsoleLine('Running program...', 'info'), 3500);
+            setTimeout(() => addConsoleLine('Project outcomes:', 'info'), 4000);
+            setTimeout(() => addConsoleLine('• Performance optimization: Efficiency increased by 200%', 'result'), 4500);
+            setTimeout(() => addConsoleLine('• Robust solutions implemented: 3 critical systems fortified', 'result'), 5000);
+            setTimeout(() => addConsoleLine('• Complex challenge solved: System scalability achieved', 'result'), 5500);
+            setTimeout(() => addConsoleLine('• Startup-Corporate bridge established: Agility score +40', 'result'), 6000);
+            setTimeout(() => addConsoleLine('• Tech talk delivered: Team knowledge base expanded', 'result'), 6500);
+            setTimeout(() => addConsoleLine('Project success achieved!', 'success'), 7000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const libraryElement = document.getElementById('library-code');
+            const mainElement = document.getElementById('main-code');
+            
+            typeCode(libraryElement, libraryCode);
+            setTimeout(() => {
+                typeCode(mainElement, mainCode);
+                setTimeout(simulateCompilation, mainCode.length * 10 + 1000);
+            }, libraryCode.length * 10 + 1000);
+        });
+    </script>
+</body>
+</html>
